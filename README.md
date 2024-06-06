@@ -235,7 +235,7 @@ select
   , u.total_views
   , u.total_videos
 from
-	us_top_youtubers_2024 u
+    us_top_youtubers_2024 u
 ```
 
 ### Create the SQL view
@@ -255,7 +255,7 @@ create view view_us_top_youtubers_2024 as (
 		  , u.total_views
 		  , u.total_videos
 		from
-			us_top_youtubers_2024 u
+                    us_top_youtubers_2024 u
 )
 ```
 
