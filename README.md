@@ -254,7 +254,7 @@ Goal :
 create view view_us_top_youtubers_2024 as (
 
 		select
-			  cast(substring(u.name, 1, charindex('@', u.name) - 1) as varchar(100)) as channel_name
+                    cast(substring(u.name, 1, charindex('@', u.name) - 1) as varchar(100)) as channel_name
 		  , u.total_subscribers
 		  , u.total_views
 		  , u.total_videos
@@ -263,6 +263,59 @@ create view view_us_top_youtubers_2024 as (
 )
 
 ```
+
+# Data Testing
+
+What are we testing for? 
+
+High Quality Data Set - data that is complete and accurate, not missing records or inaccurate data, so we need to make sure our stakeholders can make accurate decisions based on this data.
+In order to make sure this is true, we need to run different tests. 
+
+Data quality tests : 
+
+1. Row count check
+2. Column count check
+3. Data type check
+4. Duplicate check
+
+Expectations : 
+
+1. Row count = 100
+2. Column count = 4
+3. Data Types :
+    - channel_name = VARCHAR
+    - total_subscribers = integer or numerical
+    - total_views = integer or numerical
+    - total_videos = integer or numerical
+4. Duplicate count = 0
+
+
+## Row count check
+
+
+```sql
+
+/*
+    Count the total number of rows 
+    1. row count check (...PASSED!!!)
+*/
+select
+    count(*) as row_count
+from	
+    view_us_youtubers_2024 u 
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
