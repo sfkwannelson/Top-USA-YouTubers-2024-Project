@@ -152,9 +152,116 @@ What will this dashboard look like? What visuals will we be including?
 
 
 
-#Development
+# Development 
+
+Stages of development : 
+
+1. Collect top YouTuber data
+2. Explore data on Excel
+3. Import data into SQL Server Management Studio
+4. Clean the data w/ SQL
+5. Test the data w/ SQL
+6. Create a view w/ SQL
+7. Import view into Power BI for visualiztion
+8. Create DAX measures and Power BI Dashboard
+9. Create an analysis workbook
+10. Generate findings based on insights
+11. Provide recommendations to stakeholder
+12. Publish the data to GitHub Pages
 
 
+## Initial Data Exploration
+
+Initial Observations : 
+
+1. There are 4 columns we will need : channel_name, total_subscribers, total_views, and total_videos. We will filter for these 4 columns during the SQL cleaning phase.
+2. The channel_name column includes the channel name followed by an @ and the channel id, so we will need to extract the channel name from this string.
+3. We will need to check for any null values during the data cleaning process. 
+
+
+## Data Cleaning
+
+What should the clean data look like? 
+
+We are aiming to refine our dataset to include only relevant infomration for accurate analysis. 
+
+The clean data should be the following constraints : 
+
+- channel_name, total_subscribers, total_views, and total_videos columns
+- Ensure all data types are appropriate
+- No null values, complete dataset
+- No unknown character values
+- Provide appropriate alias, or rename
+
+  
+Below is a table outlining the constraints on our cleaned dataset:
+
+| Property | Description |
+| --- | --- |
+| Number of Rows | 100 |
+| Number of Columns | 4 |
+
+And here is a tabular representation of the expected schema for the clean data:
+
+| Column Name | Data Type | Nullable |
+| --- | --- | --- |
+| channel_name | VARCHAR | NO |
+| total_subscribers | INTEGER | NO |
+| total_views | INTEGER | NO |
+| total_videos | INTEGER | NO |
+
+
+### Data Cleaning Steps
+
+1. Remove the unnecessary columns by only selecting the ones we need
+2. Extract the YouTube channel name from channel_name column
+3. Rename columns using aliases
+
+
+### Transform the data 
+
+
+```sql
+
+/*
+Goal :
+  1. select all columns that are necessary and leave out ones that are not
+  2. extract channel names from name column
+  3. rename name column to show channel_name
+*/
+
+select
+    cast(substring(u.name, 1, charindex('@', u.name) - 1) as varchar(100)) as channel_name
+  , u.total_subscribers
+  , u.total_views
+  , u.total_videos
+from
+	us_top_youtubers_2024 u
+'''
+
+### Create the SQL view
+
+
+'''sql
+
+/*
+Goal : 
+	1. create view to store cleaned and transformed data
+*/
+
+
+create view view_us_top_youtubers_2024 as (
+
+		select
+			  cast(substring(u.name, 1, charindex('@', u.name) - 1) as varchar(100)) as channel_name
+		  , u.total_subscribers
+		  , u.total_views
+		  , u.total_videos
+		from
+			us_top_youtubers_2024 u
+)
+
+'''
 
 
 
