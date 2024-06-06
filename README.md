@@ -309,8 +309,72 @@ from
 ![Row count check](assets/images/Row count check.PNG)
 
 
+## Column count check
 
 
+```sql
+
+/*
+    2. column count check (...PASSED!!!)
+    information_schema
+*/
+
+select
+    count(*) as column_count
+from	
+    information_schema.columns
+where
+    1=1
+    and table_name = 'view_us_youtubers_2024'
+```
+
+![Column count check](assets/images/Column count check.PNG)
+
+
+## Data type check
+
+
+```sql
+
+/*
+    Check the data type of each column
+    3. data type check (...PASSED!!!)
+*/
+select
+    column_name
+  , data_type
+from	
+    information_schema.columns
+where
+    1=1
+    and table_name = 'view_us_youtubers_2024'
+```
+
+![Data type check](assets/images/Data type check.png)
+
+
+## Duplicate check
+
+
+```sql
+
+/*
+    Check for duplicates, duplicate = 0
+    4. duplicate count (...PASSED!!!)
+*/
+
+select
+    channel_name
+  , count(*) as duplicate_count
+from	
+    view_us_youtubers_2024
+group by
+    channel_name
+having 
+    count(*) > 1
+```
+
+![Duplicate check](assets/images/Duplicate Check.PNG)
 
 
 
