@@ -237,12 +237,13 @@ select
   , u.total_videos
 from
 	us_top_youtubers_2024 u
-'''
+
+```
 
 ### Create the SQL view
 
 
-'''sql
+```sql
 
 /*
 Goal : 
@@ -261,7 +262,7 @@ create view view_us_top_youtubers_2024 as (
 			us_top_youtubers_2024 u
 )
 
-'''
+```
 
 
 
