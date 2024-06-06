@@ -99,7 +99,56 @@ We need top USA YouTuber 2024 data which include :
 - Subscriber engagement ratio
 - Views per subscriber
 
+## Data Quality Checks
 
+We need to add measures in place to confirm the dataset contains the data required without any issues - here are some of the data quality checks we need to conduct : 
+
+- Row count check
+- Column count check
+- Data type check
+- Duplicate check
+
+
+# Stages
+
+- Design
+- Development
+- Testing
+- Analysis
+- Recommendations
+
+  
+# Design
+
+## Dashboard Components
+
+What questions are we trying to answer with this dashboard? 
+
+1. Who are the top 10 YouTubers with most subscribers?
+2. Who are the top 10 YouTubers with the most viewership?
+3. Which 3 channels uploaded the most videos?
+4. Which 3 channels have the highest average views per video?
+5. Which 3 channels have the highest views per subscriber ratio?
+6. Which 3 channels have the highest subscriber engagement rate per video uploaded?
+
+## Dashboard Mockup
+
+What will this dashboard look like? What visuals will we be including? 
+
+1. Data Table
+2. Treemap
+3. Scorecards
+4. Horizontal Bar Chart
+
+## Tools 
+
+| Tool | Purpose |
+| --- | --- |
+| Excel | Exploring the data |
+| SQL Server | Cleaning, testing, and analyzing the data |
+| Power BI | Visualizing the data via interactive dashboards |
+| GitHub | Hosting the project documentation and version control |
+| Mokkup AI | Designing the wireframe/mockup of the dashboard | 
 
 
 
