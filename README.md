@@ -222,7 +222,6 @@ And here is a tabular representation of the expected schema for the clean data:
 
 
 ```sql
-
 /*
 Goal :
   1. select all columns that are necessary and leave out ones that are not
@@ -237,19 +236,16 @@ select
   , u.total_videos
 from
 	us_top_youtubers_2024 u
-
 ```
 
 ### Create the SQL view
 
 
 ```sql
-
 /*
 Goal : 
 	1. create view to store cleaned and transformed data
 */
-
 
 create view view_us_top_youtubers_2024 as (
 
@@ -261,7 +257,6 @@ create view view_us_top_youtubers_2024 as (
 		from
 			us_top_youtubers_2024 u
 )
-
 ```
 
 # Data Testing
@@ -294,7 +289,6 @@ Expectations :
 
 
 ```sql
-
 /*
     Count the total number of rows 
     1. row count check (...PASSED!!!)
@@ -313,7 +307,6 @@ from
 
 
 ```sql
-
 /*
     2. column count check (...PASSED!!!)
     information_schema
@@ -335,7 +328,6 @@ where
 
 
 ```sql
-
 /*
     Check the data type of each column
     3. data type check (...PASSED!!!)
@@ -357,7 +349,6 @@ where
 
 
 ```sql
-
 /*
     Check for duplicates, duplicate = 0
     4. duplicate count (...PASSED!!!)
