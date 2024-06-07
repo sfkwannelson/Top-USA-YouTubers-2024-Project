@@ -517,12 +517,12 @@ Here are the questions we need to answer for our marketing client :
 
 ```sql
 select
-	u.name
+    u.name
   , round(cast(u.total_views as float)/ u.total_videos, 2) as avg_views_per_vid
 from
-	youtube_db.dbo.us_top_youtubers_2024 u
+    youtube_db.dbo.us_top_youtubers_2024 u
 order by
-	avg_views_per_vid desc
+    avg_views_per_vid desc
 
 ```
 
