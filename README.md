@@ -633,7 +633,7 @@ c. Cocomelon - Nursery Rhymes
 
 **Highest ROI : Cocomelon - Nursery Rhymes @ $15,688,000 net profit**
 
-#### SQL query
+##### SQL query
 
 ```sql
 /*
@@ -677,10 +677,10 @@ order by
 
 ```
 
-#### Output
+##### Output
 ![Top Subscriber Analysis](assets/images/Top subscriber analysis - SQL.PNG)
 
-#### Excel Analysis Workbook
+##### Excel Analysis Workbook
 ![Top Subscriber Excel Workbook](assets/images/Top subscriber - Excel workbook.PNG)
 
 
@@ -713,7 +713,7 @@ c. ABS-CBN Entertainment
 
 **Highest ROI : ABS-CBN Entertainment @ -$31,000 (net loss)**
 
-#### SQL query
+##### SQL query
 
 ```sql
 /*
@@ -756,10 +756,10 @@ order by
 
 ```
 
-#### Output
+##### Output
 ![Top Video Count Analysis](assets/images/Top video count analysis - SQL.PNG)
 
-#### Excel Analysis Workbook
+##### Excel Analysis Workbook
 ![Top Video Excel Workbook](assets/images/Top video analysis - Excel workbook.PNG)
 
 
@@ -792,7 +792,7 @@ c. SET India
 
 **Highest ROI : Cocomelon - Nursery Rhymes @ $15,608,000 net profit**
 
-#### SQL query
+##### SQL query
 
 ```sql
 /*
@@ -835,10 +835,10 @@ order by
 
 ```
 
-#### Output
+##### Output
 ![Top Views Analysis](assets/images/Top view analysis - SQL.PNG)
 
-#### Excel Analysis Workbook
+##### Excel Analysis Workbook
 ![Top Views Excel Workbook](assets/images/Top view analysis - Excel workbook.PNG)
 
 
