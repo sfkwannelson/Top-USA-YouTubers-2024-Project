@@ -479,6 +479,8 @@ RETURN viewspersubscriber
 
 # Analysis
 
+### Findings
+
 For this analysis, we will be focusing on the questions below : 
 
 Here are the questions we need to answer for our marketing client : 
@@ -591,9 +593,111 @@ order by
 
 ```
 
+#### Notes 
+
+For this analysis, we prioritized analyzing metrics that directly impacted the return on investment (ROI) for this marketing campaign. The analysis we will do include : 
+
+- Total subscriber analysis
+- Total videos analysis
+- Total views analysis
+
+
+### Validation
+
+#### 1. Top Subscriber Analysis
+
+##### Calculation Breakdown
+
+Campaign Type : Product Placement
+Product Cost : $5.00
+Campaign Cost : $50,000 (one-time fee)
+Conversion Rate : 0.02 or 2%
+
+a. T-series
+- Average Views per Video = 12,180,000.00
+- Potential Product Sales per Video = Average Views per Video * Conversion Rate = 12,180,000.00 * 0.02 = 243,600 units sold
+- Potential Revenue per Video = Potential Product Sales per Video * Product Cost = 243,600 * $5.00 = $1,218,000
+- **Net Profit = Potential Revenue per Video - Campaign Cost = $1,218,000 - $50,000 = $1,168,000**
+
+b. MrBeast 
+- Average Views per Video = 61,970,000.00
+- Potential Product Sales per Video = Average Views per Video * Conversion Rate = 61,970,000.00 * 0.02 = 1,239,400 units sold
+- Potential Revenue per Video = Potential Product Sales per Video * Product Cost = 1,239,400 * $5.00 = $6,197,000
+- **Net Profit = Potential Revenue per Video - Campaign Cost = $6,197,000 - $50,000 = $6,147,000**
+
+c. Cocomelon - Nursery Rhymes
+- Average Views per Video = 157,380,000.00
+- Potential Product Sales per Video = Average Views per Video * Conversion Rate = 157,380,000.00 * 0.02 = 3,147,600 units sold
+- Potential Revenue per Video = Potential Product Sales per Video * Product Cost = 3,147,600 * $5.00 = $15,738,000
+- **Net Profit = Potential Revenue per Video - Campaign Cost = $15,738,000 - $50,000 = $15,688,000**
+
+**Highest ROI : Cocomelon - Nursery Rhymes @ $15,688,000 net profit**
+
+#### SQL query
+
+```sql
+/*
+1. Define the variables
+2. Create a CTE that rounds the average views per video
+3. Select columns appropriate for our analysis
+4. Filter the results by the YouTuber Channels with the highest subscriber bases
+5. Order by net_profit (from highest to lowest)
+*/
+
+---- (1)
+declare @conversionrate float = 0.02;		-- conversion rate @ 2%
+declare @productcost money = 5.0;	        -- product cost @ $5
+declare @campaigncost money = 50000.0;          -- campaign cost @ $50,000
+
+-- (2)
+with channeldata as (
+	select
+            y.channel_name
+	  , y.total_subscribers
+	  , y.total_views
+	  , y.total_videos 
+	  , round(cast(y.total_views as float)/ y.total_videos, -4) as rounded_average_views_per_video
+	from	
+            youtube_db.dbo.view_us_youtubers_2024 y
+)
+
+-- (3, 4, 5) 
+select
+    c.channel_name
+  , c.rounded_average_views_per_video
+  , (c.rounded_average_views_per_video * @conversionrate) as potential_units_sold_per_video
+  , (c.rounded_average_views_per_video * @conversionrate * @productcost) as potential_revenue_per_video
+  , (c.rounded_average_views_per_video * @conversionrate * @productcost) - @campaigncost as net_profit
+from
+    channeldata c
+where
+    c.channel_name in ('T-Series', 'MrBeast', 'Cocomelon - Nursery Rhymes')
+order by
+    net_profit desc
+
+```
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 
 
