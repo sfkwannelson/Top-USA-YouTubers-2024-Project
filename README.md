@@ -227,6 +227,7 @@ Goal :
   1. select all columns that are necessary and leave out ones that are not
   2. extract channel names from name column
   3. rename name column to show channel_name
+
 */
 
 select
@@ -236,6 +237,7 @@ select
   , u.total_videos
 from
     us_top_youtubers_2024 u
+
 ```
 
 ### Create the SQL view
@@ -257,6 +259,7 @@ create view view_us_top_youtubers_2024 as (
 		from
                     us_top_youtubers_2024 u
 )
+
 ```
 
 # Data Testing
@@ -296,7 +299,8 @@ Expectations :
 select
     count(*) as row_count
 from	
-    view_us_youtubers_2024 u 
+    view_us_youtubers_2024 u
+
 ```
 
 
@@ -319,6 +323,7 @@ from
 where
     1=1
     and table_name = 'view_us_youtubers_2024'
+
 ```
 
 ![Column count check](assets/images/Column count check.PNG)
@@ -340,6 +345,7 @@ from
 where
     1=1
     and table_name = 'view_us_youtubers_2024'
+
 ```
 
 ![Data type check](assets/images/Data type check.png)
@@ -363,18 +369,202 @@ group by
     channel_name
 having 
     count(*) > 1
+
 ```
 
 ![Duplicate check](assets/images/Duplicate Check.PNG)
 
 
+# Visualization
+
+## Power BI Dashboard 
+
+![GIF of Power BI Dashboard](assets/images/top_uk_youtubers_2024.gif)
 
 
+## DAX Measures
+
+### 1. Total Subscribers (M)
+```sql
+Total Subscribers (M) = 
+VAR million = 1000000
+VAR sumffsubscribers = sum(view_uk_youtubers_2024[total_subscribers])
+VAR totalsubscribers = divide(sumffsubscribers, million)
+
+RETURN totalsubscribers
+
+```
+
+### 2. Total Views (B)
+```sql
+Total Views (B) = 
+VAR billion = 1000000000
+VAR sumoftotalviews = sum(view_uk_youtubers_2024[total_views])
+VAR totalviews = round(sumoftotalviews/ billion, 2)
+
+RETURN totalviews
+
+```
+
+### 3. Total Videos
+```sql
+Total Videos = 
+VAR totalvideos = sum(view_uk_youtubers_2024[total_videos])
+
+RETURN totalvideos
+
+```
+
+### 4. Average Views Per Video (M)
+```sql
+Average Views per Video (M) = 
+VAR sumoftotalviews = sum(view_uk_youtubers_2024[total_views])
+VAR sumoftotalvideos = sum(view_uk_youtubers_2024[total_videos])
+VAR  avgviewspervideo = divide(sumoftotalviews, sumoftotalvideos, BLANK())
+VAR finalavgviewspervideo = divide(avgviewspervideo, 1000000, BLANK())
+
+RETURN finalavgviewspervideo
+
+```
 
 
+### 5. Subscriber Engagement Rate
+```sql
+Subscriber Engagement Rate = 
+VAR sumoftotalsubscribers = sum(view_uk_youtubers_2024[total_subscribers])
+VAR sumoftotalvideos = sum(view_uk_youtubers_2024[total_videos])
+VAR subscriberengrate = divide(sumoftotalsubscribers, sumoftotalvideos, BLANK())
+
+RETURN subscriberengrate
+
+```
 
 
+### 6. Views per subscriber
+```sql
+Views Per Subscriber = 
+VAR sumoftotalviews = sum(view_uk_youtubers_2024[total_views])
+VAR sumoftotalsubscribers = sum(view_uk_youtubers_2024[total_subscribers])
+VAR viewspersubscriber = divide(sumoftotalviews, sumoftotalsubscribers, BLANK())
 
+RETURN viewspersubscriber
+
+```
+
+
+# Analysis
+
+For this analysis, we will be focusing on the questions below : 
+
+Here are the questions we need to answer for our marketing client : 
+
+1. Who are the top 10 YouTubers with most subscribers?
+2. Who are the top 10 YouTubers with the most viewership?
+3. Which 3 channels uploaded the most videos?
+4. Which 3 channels have the highest average views per video?
+5. Which 3 channels have the highest views per subscriber ratio?
+6. Which 3 channels have the highest subscriber engagement rate per video uploaded?
+
+### 1. Who are the top 10 YouTubers with most subscribers?
+
+| Rank | Channel Name                | Subscribers (M) |
+|------|-----------------------------|-----------------|
+| 1    | T-series                    | 265.00          |
+| 2    | MrBeast                     | 260.00          |
+| 3    | Cocomelon - Nursery Rhymes  | 175.00          |
+| 4    | SET India                   | 172.00          |
+| 5    | Kids Diana Show             | 122.00          |
+| 6    | Vlad and Niki               | 118.00          |
+| 7    | Like Nastya                 | 115.00          |
+| 8    | PewDiePie                   | 111.00          |
+| 9    | Zee Music Company           | 107.00          |
+| 10   | WWE                         | 101.00          |
+
+
+### 2. Who are the top 10 YouTubers with the most viewership?
+
+| Rank | Channel Name                 | Total Views (B) |
+|------|------------------------------|-----------------|
+| 1    | T-series                     | 255.64          |
+| 2    | Cocomelon - Nursery Rhymes   | 182.88          |
+| 3    | SET India                    | 163.88          |
+| 4    | Sony SAB                     | 114.52          |
+| 5    | Kids Diana Show              | 103.04          |
+| 6    | Like Nastya                  | 100.39          |
+| 7    | Vlad and Niki                | 90.26           |
+| 8    | Zee TV                       | 89.16           |
+| 9    | WWE                          | 84.53           |
+| 10    | Colors TV                   | 70.47           |
+
+
+### 3. Which 3 channels uploaded the most videos?
+
+| Rank | Channel Name             | Videos Uploaded |
+|------|--------------------------|-----------------|
+| 1    | ABP NEWS                 | 375,160.00      |
+| 2    | Aaj Tak                  | 360,870.00      |
+| 3    | ABS-CBN Entertainment    | 223,974.00      |
+
+
+### 4. Which 3 channels have the highest average views per video?
+
+| Channel Name        | Averge Views per Video (M) |
+|---------------------|----------------------------|
+| Bad Bunny           | 225.88                     |
+| Bruno Mars          | 210.29                     |
+| Katy Perry          | 186.84                     |
+
+
+```sql
+select
+	u.name
+  , round(cast(u.total_views as float)/ u.total_videos, 2) as avg_views_per_vid
+from
+	youtube_db.dbo.us_top_youtubers_2024 u
+order by
+	avg_views_per_vid desc
+
+```
+
+### 5. Which 3 channels have the highest views per subscriber ratio?
+
+| Rank | Channel Name                      | Views per Subscriber        |
+|------|---------------------------------  |---------------------------- |
+| 1    | Ryan's World                      | 1556.14                     |
+| 2    | Sony SAB                          | 1244.76                     |
+| 3    | Super Simple Songs - Kids Songs   | 1209.12                     |
+
+
+```sql
+select
+    u.name
+  , round(cast(u.total_views as float)/ u.total_subscribers, 2) as views_per_sub
+from
+    youtube_db.dbo.us_top_youtubers_2024 u
+order by
+    views_per_sub desc
+
+```
+
+### 6. Which 3 channels have the highest subscriber engagement rate per video uploaded?
+
+| Rank | Channel Name      | Views per Subscriber        |
+|------|------------------ |---------------------------- |
+| 1    | Billie Eilish     | 429,661.02                  |
+| 2    | Bruno Mars        | 380,000.00                  |
+| 3    | EminemMusic       | 368,518.52                  |
+
+
+```sql
+select
+    u.name
+  , round(cast(u.total_subscribers as float)/ u.total_videos, 2) as eng_rate
+from
+    youtube_db.dbo.us_top_youtubers_2024 u
+order by
+    eng_rate desc
+
+```
 
 
 
