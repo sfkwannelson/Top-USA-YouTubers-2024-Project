@@ -1,9 +1,21 @@
 # Data Portfolio Project : Top USA YouTubers 2024
-## Excel to SQL to Power BI
+### Excel to SQL to Power BI
 
 
 
 # Table of Contents
+
+
+- [Business Case](#business-case)
+- [Objective](#objective)
+  - [Challenges](#challenges)
+  - [Target Audience](#target-audience)
+- [User Story](#user-story)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Success Criteria](#success-criteria)
+- [Data Source](#data-source)
+  - [Data Quality Checks](#data-quality-checks)
+
 
 
 # Business Case
