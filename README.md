@@ -598,7 +598,7 @@ order by
 For this analysis, we prioritized analyzing metrics that directly impacted the return on investment (ROI) for this marketing campaign. The analysis we will do include : 
 
 - Total subscriber analysis
-- Total videos analysis
+- Total video count analysis
 - Total views analysis
 
 
@@ -678,7 +678,7 @@ order by
 ```
 
 
-#### 2. Top Video Analysis
+#### 2. Top Video Count Analysis
 
 ##### Calculation Breakdown
 
