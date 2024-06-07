@@ -64,14 +64,14 @@ Who are we aiming to support?
 - Primary : Sharon (Head of Marketing)
 - Secondary - Marketing Team Members (who are involved with this campaign)
 
-## User Story 
+# User Story 
 
 As the head of marketing, I want to identify the top YouTubers in the USA based on subscriber count, videos uploaded and views accumulated, so that I can decide on which channels would be best to run marketing campaigns with to generate a good ROI.
 Also, I want to analyze the potential for successful campaigns with the top Youtubers so that I can maximize the ROI.
 
 
 
-## Acceptance Criteria
+### Acceptance Criteria
 
 The dashboard should : 
 
@@ -86,7 +86,7 @@ The solution should :
 - Consider reach, engagement and potential revenue based on estimated conversion rates
 - Clearly explain the recommendations with data-driven justifications 
 
-## Success Criteria 
+### Success Criteria 
 
 Sharon can : 
 
