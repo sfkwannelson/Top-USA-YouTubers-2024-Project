@@ -111,7 +111,7 @@ We need top USA YouTuber 2024 data which include :
 - Subscriber engagement ratio
 - Views per subscriber
 
-## Data Quality Checks
+### Data Quality Checks
 
 We need to add measures in place to confirm the dataset contains the data required without any issues - here are some of the data quality checks we need to conduct : 
 
@@ -132,7 +132,7 @@ We need to add measures in place to confirm the dataset contains the data requir
   
 # Design
 
-## Dashboard Components
+### Dashboard Components
 
 What questions are we trying to answer with this dashboard? 
 
@@ -143,7 +143,7 @@ What questions are we trying to answer with this dashboard?
 5. Which 3 channels have the highest views per subscriber ratio?
 6. Which 3 channels have the highest subscriber engagement rate per video uploaded?
 
-## Dashboard Mockup
+### Dashboard Mockup
 
 What will this dashboard look like? What visuals will we be including? 
 
@@ -152,7 +152,7 @@ What will this dashboard look like? What visuals will we be including?
 3. Scorecards
 4. Horizontal Bar Chart
 
-## Tools 
+### Tools 
 
 | Tool | Purpose |
 | --- | --- |
@@ -182,7 +182,7 @@ Stages of development :
 12. Publish the data to GitHub Pages
 
 
-## Initial Data Exploration
+### Initial Data Exploration
 
 Initial Observations : 
 
@@ -191,7 +191,7 @@ Initial Observations :
 3. We will need to check for any null values during the data cleaning process. 
 
 
-## Data Cleaning
+### Data Cleaning
 
 What should the clean data look like? 
 
@@ -230,7 +230,7 @@ And here is a tabular representation of the expected schema for the clean data:
 3. Rename columns using aliases
 
 
-### Transform the data 
+#### Transform the data 
 
 
 ```sql
@@ -252,7 +252,7 @@ from
 
 ```
 
-### Create the SQL view
+#### Create the SQL view
 
 
 ```sql
@@ -300,7 +300,7 @@ Expectations :
 4. Duplicate count = 0
 
 
-## Row count check
+### Row count check
 
 
 ```sql
@@ -319,7 +319,7 @@ from
 ![Row count check](assets/images/Row count check.PNG)
 
 
-## Column count check
+### Column count check
 
 
 ```sql
@@ -341,7 +341,7 @@ where
 ![Column count check](assets/images/Column count check.PNG)
 
 
-## Data type check
+### Data type check
 
 
 ```sql
@@ -363,7 +363,7 @@ where
 ![Data type check](assets/images/Data type check.png)
 
 
-## Duplicate check
+### Duplicate check
 
 
 ```sql
@@ -389,14 +389,14 @@ having
 
 # Visualization
 
-## Power BI Dashboard 
+### Power BI Dashboard 
 
 ![GIF of Power BI Dashboard](assets/images/top_uk_youtubers_2024.gif)
 
 
-## DAX Measures
+### DAX Measures
 
-### 1. Total Subscribers (M)
+#### 1. Total Subscribers (M)
 ```sql
 Total Subscribers (M) = 
 VAR million = 1000000
@@ -407,7 +407,7 @@ RETURN totalsubscribers
 
 ```
 
-### 2. Total Views (B)
+#### 2. Total Views (B)
 ```sql
 Total Views (B) = 
 VAR billion = 1000000000
@@ -418,7 +418,7 @@ RETURN totalviews
 
 ```
 
-### 3. Total Videos
+#### 3. Total Videos
 ```sql
 Total Videos = 
 VAR totalvideos = sum(view_uk_youtubers_2024[total_videos])
@@ -427,7 +427,7 @@ RETURN totalvideos
 
 ```
 
-### 4. Average Views Per Video (M)
+#### 4. Average Views Per Video (M)
 ```sql
 Average Views per Video (M) = 
 VAR sumoftotalviews = sum(view_uk_youtubers_2024[total_views])
@@ -440,7 +440,7 @@ RETURN finalavgviewspervideo
 ```
 
 
-### 5. Subscriber Engagement Rate
+#### 5. Subscriber Engagement Rate
 ```sql
 Subscriber Engagement Rate = 
 VAR sumoftotalsubscribers = sum(view_uk_youtubers_2024[total_subscribers])
@@ -452,7 +452,7 @@ RETURN subscriberengrate
 ```
 
 
-### 6. Views per subscriber
+#### 6. Views per subscriber
 ```sql
 Views Per Subscriber = 
 VAR sumoftotalviews = sum(view_uk_youtubers_2024[total_views])
