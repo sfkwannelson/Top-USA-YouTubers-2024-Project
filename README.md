@@ -610,8 +610,8 @@ For this analysis, we prioritized analyzing metrics that directly impacted the r
 
 Campaign Type : Product Placement
 Product Cost : $5.00
-Campaign Cost : $50,000 (one-time fee)
 Conversion Rate : 0.02 or 2%
+Campaign Cost : $50,000 (one-time fee)
 
 a. T-series
 - Average Views per Video = 12,180,000.00
@@ -678,16 +678,150 @@ order by
 ```
 
 
+#### 2. Top Video Analysis
+
+##### Calculation Breakdown
+
+Campaign Type : 11-video Series Sponsorship 
+Product Cost : $5.00
+Conversion Rate : 0.02 or 2%
+Campaign Cost : $55,000 ($5k per video)
+
+a. ABP NEWS
+- Average Views per Video = 40,000.00
+- Potential Product Sales per Video = Average Views per Video * Conversion Rate = 40,000.00 * 0.02 = 800 units sold
+- Potential Revenue per Video = Potential Product Sales per Video * Product Cost = 800 * $5.00 = $4,000
+- **Net Profit = Potential Revenue per Video - Campaign Cost = $4,000 - $55,000 = -$51,000**
+
+b. Aaj Tak 
+- Average Views per Video = 90,000.00
+- Potential Product Sales per Video = Average Views per Video * Conversion Rate = 90,000.00 * 0.02 = 1,800 units sold
+- Potential Revenue per Video = Potential Product Sales per Video * Product Cost = 1,800 * $5.00 = $9,000
+- **Net Profit = Potential Revenue per Video - Campaign Cost = $9,000 - $55,000 = -$46,000**
+
+c. ABS-CBN Entertainment
+- Average Views per Video = 240,000.00
+- Potential Product Sales per Video = Average Views per Video * Conversion Rate = 240,000.00 * 0.02 = 4,800 units sold
+- Potential Revenue per Video = Potential Product Sales per Video * Product Cost = 4,800 * $5.00 = $24,000
+- **Net Profit = Potential Revenue per Video - Campaign Cost = $24,000 - $55,000 = -$31,000**
+
+**Highest ROI : ABS-CBN Entertainment @ -$31,000 (net loss)**
+
+#### SQL query
+
+```sql
+/*
+1. Define the variables 
+2. Create a CTE that rounds the average views per video
+3. Select columns appropriate for our analysis
+4. Filter the results by the YouTuber Channels with the highest video count
+5. Order by net_profit (from highest to lowest)
+*/
+
+-- (1)
+declare @conversionrate float = 0.02;		-- conversion rate @ 2%
+declare @productcost money = 5.0;		-- product cost @ $5
+declare @campaigncost money = 55000.0;          -- campaign cost @ $55,000, 11 video series @$5k a video
+
+-- (2)
+with channeldata as (
+	select
+            y.channel_name
+	  , y.total_subscribers
+	  , y.total_views
+	  , y.total_videos
+	  , round(cast(y.total_views as float)/ y.total_videos, -4) as rounded_average_views_per_video
+	from
+            youtube_db.dbo.view_us_youtubers_2024 y
+)
+
+select
+    c.channel_name
+  , rounded_average_views_per_video
+  , (rounded_average_views_per_video * @conversionrate) as potential_product_sales_per_vid
+  , (rounded_average_views_per_video * @conversionrate * @productcost) as potential_rev_per_vid
+  , (rounded_average_views_per_video * @conversionrate * @productcost) - @campaigncost as net_profit
+from
+    channeldata c
+where
+    c.channel_name in ('ABP NEWS', 'Aaj Tak', 'ABS-CBN Entertainment')
+order by
+    net_profit desc
+
+```
 
 
+#### 3. Top Views Analysis
 
+##### Calculation Breakdown
 
+Campaign Type : Influencer Marketing
+Product Cost : $5.00
+Conversion Rate : 0.02 or 2%
+Campaign Cost : $130,000 (one-time fee)
 
+a. T-series
+- Average Views per Video = 12,180,000.00
+- Potential Product Sales per Video = Average Views per Video * Conversion Rate = 12,180,000.00 * 0.02 = 243,600 units sold
+- Potential Revenue per Video = Potential Product Sales per Video * Product Cost = 243,600 * $5.00 = $1,218,000
+- **Net Profit = Potential Revenue per Video - Campaign Cost = $1,218,000 - $130,000 = $1,088,000**
 
+b. Cocomelon - Nursery Rhymes
+- Average Views per Video = 157,380,000.00
+- Potential Product Sales per Video = Average Views per Video * Conversion Rate = 157,380,000.00 * 0.02 = 3,147,600 units sold
+- Potential Revenue per Video = Potential Product Sales per Video * Product Cost = 3,147,600 * $5.00 = $15,738,000
+- **Net Profit = Potential Revenue per Video - Campaign Cost = $15,738,000 - $130,000 = $15,608,000**
 
+c. SET India
+- Average Views per Video = 1,190,000.00
+- Potential Product Sales per Video = Average Views per Video * Conversion Rate = 1,190,000.00 * 0.02 = 23,800 units sold
+- Potential Revenue per Video = Potential Product Sales per Video * Product Cost = 23,800 * $5.00 = $119,000
+- **Net Profit = Potential Revenue per Video - Campaign Cost = $119,000 - $130,000 = -$11,000**
 
+**Highest ROI : Cocomelon - Nursery Rhymes @ $15,608,000 net profit**
 
+#### SQL query
 
+```sql
+/*
+1. Define the variables 
+2. Create a CTE that rounds the average views per video
+3. Select columns appropriate for our analysis
+4. Filter the results by the YouTuber Channels with the greatest view count
+5. Order by net_profit (from highest to lowest)
+*/
+
+-- (1)
+declare @conversionrate float = 0.02;		-- conversion rate @ 2%
+declare @productcost money = 5.0;		-- product cost @ $5
+declare @campaigncost money = 130000.0;         -- campaign cost, Influencer Marketing
+
+-- (2)
+with channeldata as (
+	select
+            y.channel_name
+	  , y.total_subscribers
+	  , y.total_views
+	  , y.total_videos
+	  , round(cast(y.total_views as float)/ y.total_videos, -4) as rounded_average_views_per_video
+	from
+            youtube_db.dbo.view_us_youtubers_2024 y
+)
+
+select
+    c.channel_name
+  , rounded_average_views_per_video
+  , (rounded_average_views_per_video * @conversionrate) as potential_product_sales_per_vid
+  , (rounded_average_views_per_video * @conversionrate * @productcost) as potential_rev_per_vid
+  , (rounded_average_views_per_video * @conversionrate * @productcost) - @campaigncost as net_profit
+from
+    channeldata c
+where
+    c.channel_name in ('T-series', 'Cocomelon - Nursery Rhymes', 'SET India')
+order by
+    net_profit desc
+
+```
 
 
 
