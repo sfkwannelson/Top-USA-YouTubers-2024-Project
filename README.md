@@ -334,7 +334,7 @@ from
 ```
 
 
-![Row count check](assets/images/Row count check.PNG)
+![Row count check](assets/images/Row count check SQL.PNG)
 
 
 #### Column count check
@@ -356,7 +356,7 @@ where
 
 ```
 
-![Column count check](assets/images/Column count check.PNG)
+![Column count check](assets/images/Column count check SQL.PNG)
 
 
 #### Data type check
@@ -378,7 +378,7 @@ where
 
 ```
 
-![Data type check](assets/images/Data type check.png)
+![Data type check](assets/images/Data type check SQL.png)
 
 
 #### Duplicate check
@@ -402,7 +402,7 @@ having
 
 ```
 
-![Duplicate check](assets/images/Duplicate Check.PNG)
+![Duplicate check](assets/images/Duplicate Check SQL.PNG)
 
 
 # Visualization
