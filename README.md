@@ -677,8 +677,10 @@ order by
 
 ```
 
+#### Output
 ![Top Subscriber Analysis](assets/images/Top subscriber analysis - SQL.PNG)
 
+#### Excel Analysis Workbook
 ![Top Subscriber Excel Workbook](assets/images/Top subscriber - Excel workbook.PNG)
 
 
@@ -754,6 +756,12 @@ order by
 
 ```
 
+#### Output
+![Top Video Count Analysis](assets/images/Top video count analysis - SQL.PNG)
+
+#### Excel Analysis Workbook
+![Top Video Excel Workbook](assets/images/Top video analysis - Excel workbook.PNG)
+
 
 #### 3. Top Views Analysis
 
@@ -827,7 +835,11 @@ order by
 
 ```
 
+#### Output
+![Top Views Analysis](assets/images/Top view analysis - SQL.PNG)
 
+#### Excel Analysis Workbook
+![Top Views Excel Workbook](assets/images/Top view analysis - Excel workbook.PNG)
 
 
 
