@@ -300,7 +300,7 @@ Expectations :
 4. Duplicate count = 0
 
 
-### Row count check
+#### Row count check
 
 
 ```sql
@@ -319,7 +319,7 @@ from
 ![Row count check](assets/images/Row count check.PNG)
 
 
-### Column count check
+#### Column count check
 
 
 ```sql
@@ -341,7 +341,7 @@ where
 ![Column count check](assets/images/Column count check.PNG)
 
 
-### Data type check
+#### Data type check
 
 
 ```sql
@@ -363,7 +363,7 @@ where
 ![Data type check](assets/images/Data type check.png)
 
 
-### Duplicate check
+#### Duplicate check
 
 
 ```sql
@@ -389,7 +389,7 @@ having
 
 # Visualization
 
-### Power BI Dashboard 
+#### Power BI Dashboard 
 
 ![GIF of Power BI Dashboard](assets/images/top_uk_youtubers_2024.gif)
 
@@ -477,7 +477,7 @@ Here are the questions we need to answer for our marketing client :
 5. Which 3 channels have the highest views per subscriber ratio?
 6. Which 3 channels have the highest subscriber engagement rate per video uploaded?
 
-### 1. Who are the top 10 YouTubers with most subscribers?
+#### 1. Who are the top 10 YouTubers with most subscribers?
 
 | Rank | Channel Name                | Subscribers (M) |
 |------|-----------------------------|-----------------|
@@ -493,7 +493,7 @@ Here are the questions we need to answer for our marketing client :
 | 10   | WWE                         | 101.00          |
 
 
-### 2. Who are the top 10 YouTubers with the most viewership?
+#### 2. Who are the top 10 YouTubers with the most viewership?
 
 | Rank | Channel Name                 | Total Views (B) |
 |------|------------------------------|-----------------|
@@ -509,7 +509,7 @@ Here are the questions we need to answer for our marketing client :
 | 10    | Colors TV                   | 70.47           |
 
 
-### 3. Which 3 channels uploaded the most videos?
+#### 3. Which 3 channels uploaded the most videos?
 
 | Rank | Channel Name             | Videos Uploaded |
 |------|--------------------------|-----------------|
@@ -518,7 +518,7 @@ Here are the questions we need to answer for our marketing client :
 | 3    | ABS-CBN Entertainment    | 223,974.00      |
 
 
-### 4. Which 3 channels have the highest average views per video?
+#### 4. Which 3 channels have the highest average views per video?
 
 | Channel Name        | Averge Views per Video (M) |
 |---------------------|----------------------------|
@@ -538,7 +538,7 @@ order by
 
 ```
 
-### 5. Which 3 channels have the highest views per subscriber ratio?
+#### 5. Which 3 channels have the highest views per subscriber ratio?
 
 | Rank | Channel Name                      | Views per Subscriber        |
 |------|---------------------------------  |---------------------------- |
@@ -558,7 +558,7 @@ order by
 
 ```
 
-### 6. Which 3 channels have the highest subscriber engagement rate per video uploaded?
+#### 6. Which 3 channels have the highest subscriber engagement rate per video uploaded?
 
 | Rank | Channel Name      | Views per Subscriber        |
 |------|------------------ |---------------------------- |
