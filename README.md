@@ -677,6 +677,10 @@ order by
 
 ```
 
+![Top Subscriber Analysis](assets/images/Top subscriber analysis - SQL.PNG)
+
+![Top Subscriber Excel Workbook](assets/images/Top subscriber - Excel workbook.PNG)
+
 
 #### 2. Top Video Count Analysis
 
