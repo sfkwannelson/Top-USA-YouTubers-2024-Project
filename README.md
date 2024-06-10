@@ -412,7 +412,7 @@ having
 
 ### Power BI Dashboard 
 
-![GIF of Power BI Dashboard](assets/images/Top USA YouTuber Dashboard GIF.gif)
+![GIF of Power BI Dashboard](assets/images/Power BI Dashboard - YouTube.gif)
 
 
 ### DAX Measures
