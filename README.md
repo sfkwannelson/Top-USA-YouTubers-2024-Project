@@ -248,7 +248,7 @@ And here is a tabular representation of the expected schema for the clean data:
 3. Rename columns using aliases
 
 
-#### Transform the data 
+##### Transform the data 
 
 
 ```sql
@@ -270,7 +270,7 @@ from
 
 ```
 
-#### Create the SQL view
+##### Create the SQL view
 
 
 ```sql
@@ -318,7 +318,7 @@ Expectations :
 4. Duplicate count = 0
 
 
-#### Row count check
+##### Row count check
 
 
 ```sql
@@ -337,7 +337,7 @@ from
 ![Row count check](assets/images/Row count check SQL.PNG)
 
 
-#### Column count check
+##### Column count check
 
 
 ```sql
@@ -359,7 +359,7 @@ where
 ![Column count check](assets/images/Column count check SQL.PNG)
 
 
-#### Data type check
+##### Data type check
 
 
 ```sql
@@ -381,7 +381,7 @@ where
 ![Data type check](assets/images/Data type check SQL.png)
 
 
-#### Duplicate check
+##### Duplicate check
 
 
 ```sql
