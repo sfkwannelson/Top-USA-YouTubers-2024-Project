@@ -694,10 +694,10 @@ order by
 
 #### Calculation Breakdown
 
-Campaign Type : 11-video Series Sponsorship 
-Product Cost : $5.00
-Conversion Rate : 0.02 or 2%
-Campaign Cost : $55,000 ($5k per video)
+Campaign Type : 11-video Series Sponsorship <br>
+Product Cost : $5.00 <br>
+Conversion Rate : 0.02 or 2% <br>
+Campaign Cost : $55,000 ($5k per video) <br>
 
 a. ABP NEWS
 - Average Views per Video = 40,000.00
@@ -773,10 +773,10 @@ order by
 
 #### Calculation Breakdown
 
-Campaign Type : Influencer Marketing
-Product Cost : $5.00
-Conversion Rate : 0.02 or 2%
-Campaign Cost : $130,000 (one-time fee)
+Campaign Type : Influencer Marketing <br>
+Product Cost : $5.00 <br>
+Conversion Rate : 0.02 or 2% <br>
+Campaign Cost : $130,000 (one-time fee) <br>
 
 a. T-series
 - Average Views per Video = 12,180,000.00
