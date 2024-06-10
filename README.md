@@ -57,7 +57,7 @@ We will utilize 2024 YouTube data to create a dashboard and draw insights from t
 
 We will analyze this information to provide informed recommendations on which YouTuber to collaborate with to Sharon and the marketing team.
 
-### Challenges
+## Challenges
 
 Trying to find successful youtubers she can work with, but : 
 
@@ -75,7 +75,7 @@ Create a simple dashboard that displays the top USA Youtubers by :
 
 With the information above, she can make a more insightful decision on who to collaborate with.
 
-### Target Audience 
+## Target Audience 
 
 Who are we aiming to support?
 
