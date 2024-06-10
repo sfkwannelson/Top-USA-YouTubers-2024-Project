@@ -39,8 +39,6 @@
   - [Action Plan](#action-plan)
 
 
-
-
 # Business Case
 
 Sharon works for a social media agency and is the head of marketing. She wants to run successful marketing campaigns with successful YouTubers from the USA. She has a budget approved by the board so she wants to be certain where to channel the budget towards.
