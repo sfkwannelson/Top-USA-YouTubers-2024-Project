@@ -878,7 +878,7 @@ What did we discover?
 
 ### Action Plan
 
-Best Channels to collaborate with : Cocomelon - Nursery Rhymes, MrBeast and T-series
+**Best Channels to collaborate with : Cocomelon - Nursery Rhymes, MrBeast and T-series**
 
 Based on our analysis, it would best to pursue a longterm partnership with Cocomelon - Nursery Rhymes to promote our client's products as they have high engagement rates and reach and will yield the greatest ROI among the channels listed above. 
 
