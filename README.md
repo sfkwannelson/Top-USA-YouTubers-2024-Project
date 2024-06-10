@@ -68,9 +68,7 @@ Trying to find successful youtubers she can work with, but :
 - 3rd party providers are out of budget, and
 - BI reporting team does not have the bandwidth to assist Sharon with the assignment
 
-Solution : 
-
-Create a simple dashboard that displays the top USA Youtubers by : 
+The solution is to create a simple dashboard that displays the top USA Youtubers by : 
 
 - Subscribers
 - Video uploads
@@ -616,10 +614,10 @@ For this analysis, we prioritized analyzing metrics that directly impacted the r
 
 #### Calculation Breakdown
 
-Campaign Type : Product Placement
-Product Cost : $5.00
-Conversion Rate : 0.02 or 2%
-Campaign Cost : $50,000 (one-time fee)
+Campaign Type : Product Placement <br>
+Product Cost : $5.00 <br>
+Conversion Rate : 0.02 or 2% <br>
+Campaign Cost : $50,000 (one-time fee) <br>
 
 a. T-series
 - Average Views per Video = 12,180,000.00
