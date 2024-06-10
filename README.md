@@ -885,7 +885,8 @@ Based on our analysis, it would best to pursue a longterm partnership with Cocom
 We will reach out to Sharon - the head of marketing, to review the timeline, logisitics and expectations. Once we have seen this collaboration through and have reached the set milestones, we will then pursue other partnerships with MrBeast and T-series. 
 
 
-- Steps to take in order to implement the recommended decisions effectively :
+Steps to take in order to implement the recommended decisions effectively :
+
 1. Reach out to the teams behind each of these channels, starting with Cocomelon - Nursery Rhymes
 2. Negotiate contracts within the budget and logistics of each marketing campaign
 3. Kick off the campaigns and track each of their performances
