@@ -7,15 +7,7 @@
 
 
 
-
-
-
-
-
-
 # Table of Contents
-
-
 - [Business Case](#business-case)
 - [Objective](#objective)
   - [Challenges](#challenges)
