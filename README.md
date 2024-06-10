@@ -847,12 +847,49 @@ order by
 ![Top Views Excel Workbook](assets/images/Top view analysis - Excel workbook.PNG)
 
 
+## Discovery
+
+What did we discover? 
+
+1. Among the top 100 USA YouTube channels, T-series, MrBeast and Cocomelon - Nursery Rhymes are the top 3 most subscribed to channels.
+2. In terms of video count, ABP NEWS, Aaj Tak, and ABS-CBN Entertainment has the greatest videos published on YouTube.
+3. In regards to total viewship, T-series, Cocomelon - Nursery Rhymes, and SET India have the greatest total view count.
+4. and, Bad Bunny, Bruno Mars, and Katy Perry, have the greatest average views per video.
+5. Entertainment and Music channels seem to produce the higher range of ROI because they consistently post and generate engagement, so we will focus our recommendation towards these channels.
 
 
+# Recommendations
+
+1. If the goal is to maximize visibility, then T-series, MrBeast, and Cocomelon - Nursery Rhymes would be the best choices (in that order) as they are the 3 channels with the highest subscribers count.
+2. Although, ABP NEWS, Aaj Tak and ABS_CBN Entertainment has the greatest amount of videos published, it is not worth collaborating with them given our current budget cap. Their viewership per video is too low and will yield a net loss if we choose to collaborate with them.
+3. T-series and Cocomelon - Nursery Rhymes both have great reach (total viewership) so it would be beneficial to collaborate with these two - but, SET India just doesn't have enough engagement per video to net a lucrative profit.
+4. Although music artist like Bad Bunny, Bruno Mars and Katy Perry have a high average viewship per video - their published video count is too low and does have a great reach. They also lack adaptability in regards to video creativity as they are music based content. 
+5. Based on this analysis, Cocomelon - Nursery Rhymes, MrBeast and T-series would be the 3 recommendations to collaborate with since they attract the most engagement and have great returns.
 
 
+### Potential ROI
 
-  
+1. A single collaborated video with Cocomelon - Nursery Rhymes for a product placement campaign will net us $15,688,000. If instead, we choose to move forward with a influencer marketing campaign, it will then net us $15,608,000.
+2. A single collaborated video with MrBeast for a product placement campaign will net us $6,147,000.
+3. A single collaborated video with T-series for a product placement campaign will net us $1,168,000. If instead, we choose to move forward with a influencer marketing campaign, it will then net us $1,088,000.
+4. Aaj Tak, ABS-CBN Entertainment, ABP NEWS and SET India will all produce a net loss (negative profit). 
+
+
+### Action Plan
+
+Best Channels to collaborate with : Cocomelon - Nursery Rhymes, MrBeast and T-series
+
+Based on our analysis, it would best to pursue a longterm partnership with Cocomelon - Nursery Rhymes to promote our client's products as they have hgih engagement rate and reach and will yield greatest ROI among the channels listed above. 
+
+We will reach out to Sharon - the head of marketing, to forecast the timeline, logisitics and expectations. Once we have advanced this collaboration and have reached the set milestones, we will then pursue other partnerships with MrBeast and T-series. 
+
+
+- Steps to take in order to implement the recommended decisions effectively :
+1. Reach out to the teams behind each of these channels, starting with Cocomelon - Nursery Rhymes
+2. Negotiate contracts within the budget and logistics of each marketing campaign
+3. Kick off the campaigns and track each of their performances
+4. Review the campaigns, gather insights and optimize based on channel audience's feedback
+
 
 
 
