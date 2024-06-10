@@ -854,15 +854,15 @@ What did we discover?
 
 1. Among the top 100 USA YouTube channels, T-series, MrBeast and Cocomelon - Nursery Rhymes are the top 3 most subscribed to channels.
 2. In terms of video count, ABP NEWS, Aaj Tak, and ABS-CBN Entertainment has the greatest videos published on YouTube.
-3. In regards to total viewship, T-series, Cocomelon - Nursery Rhymes, and SET India have the greatest total view count.
+3. In regards to total viewership, T-series, Cocomelon - Nursery Rhymes, and SET India have the greatest total view count.
 4. and, Bad Bunny, Bruno Mars, and Katy Perry, have the greatest average views per video.
-5. Entertainment and Music channels seem to produce the higher range of ROI because they consistently post and generate engagement, so we will focus our recommendation towards these channels.
+5. Entertainment and Music channels seem to produce higher return per video because they consistently post and generate engagement, so we will focus our recommendation towards these channels.
 
 
 # Recommendations
 
 1. If the goal is to maximize visibility, then T-series, MrBeast, and Cocomelon - Nursery Rhymes would be the best choices (in that order) as they are the 3 channels with the highest subscribers count.
-2. Although, ABP NEWS, Aaj Tak and ABS_CBN Entertainment has the greatest amount of videos published, it is not worth collaborating with them given our current budget cap. Their viewership per video is too low and will yield a net loss if we choose to collaborate with them.
+2. Although, ABP NEWS, Aaj Tak and ABS-CBN Entertainment has the greatest amount of videos published, it is not worth collaborating with them given our current budget cap. Their viewership per video is too low and will yield a net loss if we choose to collaborate with them.
 3. T-series and Cocomelon - Nursery Rhymes both have great reach (total viewership) so it would be beneficial to collaborate with these two - but, SET India just doesn't have enough engagement per video to net a lucrative profit.
 4. Although music artist like Bad Bunny, Bruno Mars and Katy Perry have a high average viewship per video - their published video count is too low and does have a great reach. They also lack adaptability in regards to video creativity as they are music based content. 
 5. Based on this analysis, Cocomelon - Nursery Rhymes, MrBeast and T-series would be the 3 recommendations to collaborate with since they attract the most engagement and have great returns.
@@ -880,9 +880,9 @@ What did we discover?
 
 Best Channels to collaborate with : Cocomelon - Nursery Rhymes, MrBeast and T-series
 
-Based on our analysis, it would best to pursue a longterm partnership with Cocomelon - Nursery Rhymes to promote our client's products as they have hgih engagement rate and reach and will yield greatest ROI among the channels listed above. 
+Based on our analysis, it would best to pursue a longterm partnership with Cocomelon - Nursery Rhymes to promote our client's products as they have high engagement rates and reach and will yield the greatest ROI among the channels listed above. 
 
-We will reach out to Sharon - the head of marketing, to forecast the timeline, logisitics and expectations. Once we have advanced this collaboration and have reached the set milestones, we will then pursue other partnerships with MrBeast and T-series. 
+We will reach out to Sharon - the head of marketing, to review the timeline, logisitics and expectations. Once we have seen this collaboration through and have reached the set milestones, we will then pursue other partnerships with MrBeast and T-series. 
 
 
 - Steps to take in order to implement the recommended decisions effectively :
