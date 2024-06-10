@@ -410,7 +410,7 @@ having
 
 # Visualization
 
-### Power BI Dashboard 
+### Power BI Dashboard Results
 
 ![GIF of Power BI Dashboard](assets/images/Power BI Dashboard - YouTube.gif)
 
