@@ -34,6 +34,14 @@
   - [Power BI Dashboard](#power-bi-dashboard)
   - [DAX Measures](#dax-measures)
 - [Analysis](#analysis)
+  - [Findings](#findings)
+  - [Validation](#validation)
+  - [Discovery](#discovery)
+- [Recommendations](#recommendations)
+  - [Potential ROI](#potential-roi)
+  - [Action Plan](#action-plan)
+
+
 
 
 # Business Case
